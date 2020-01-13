@@ -48,4 +48,7 @@ public class MensajeServ{
     public List<Mensaje> obtenerTodo(){
         return repositorio.findAll();
     }
+    public List<Mensaje>obtenerChat(long idChat){
+        return repositorio.findByIdChat(idChat);
+    }
 }

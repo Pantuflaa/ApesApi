@@ -51,8 +51,12 @@ public class MensajeCtrl{
     }
     
     @GetMapping("/obtenerTodo")
-    public List<Mensaje> getAllConsulta(){
+    public List<Mensaje> getAllMensaje(){
         return servicio.obtenerTodo();
+    }
+    @GetMapping("/obtenerChat")
+    public List<Mensaje> getAllChat(@RequestParam(name="id", required=true)long id){
+        return servicio.obtenerChat(id);
     }
 
 

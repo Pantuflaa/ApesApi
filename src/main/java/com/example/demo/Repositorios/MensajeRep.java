@@ -12,6 +12,7 @@ public interface  MensajeRep extends JpaRepository<Mensaje, Serializable>{
 
     public abstract Mensaje findById(long id);
     public abstract List<Mensaje> findAll();
+    public abstract List<Mensaje> findByIdChat(long idChat);
     public abstract List<Mensaje> findByIdGreaterThanAndIdChat(long id, long idChat);
 
 }
