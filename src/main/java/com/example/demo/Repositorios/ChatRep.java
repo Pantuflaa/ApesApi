@@ -16,7 +16,7 @@ public interface ChatRep extends JpaRepository<Chat, Serializable>{
     public abstract List<Chat> findAll();
     public abstract List<Chat> findByIdUsuarioAndIdConsultaAndState(long id_usuario,long id_consulta,long state);
     public abstract List<Chat> findByIdTecnicoAndIdConsultaAndState(long id_tecnico,long id_consulta,long state);
-    public abstract List<Chat> findByIdConsulta(long id_consulta);
+    public abstract Chat findByIdConsulta(long id_consulta);
     
     
 }
