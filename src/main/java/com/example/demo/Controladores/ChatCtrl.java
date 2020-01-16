@@ -59,6 +59,11 @@ public class ChatCtrl{
     public List<Chat> getAllUCS(@RequestParam(name="id_usuario",required=true) long id_usuario,@RequestParam(name="id_consulta",required=true) long id_consulta,@RequestParam(name="state",required=true) long state){
         return servicio.obtenerporUsuarioConsultasState(id_usuario, id_consulta, state);
     }
+    @GetMapping("/obtenerPorConsulta")
+    public Chat obtenerPorConsulta(@RequestParam(name="id", required=true) long id){
+        return servicio.obtenerporConsulta(id);
+    }
+
 
 
 }

@@ -56,5 +56,8 @@ public class ChatServ{
     public List<Chat> obtenerporUsuarioConsultasState(long idUsuario,long idConsulta,long state){
         return repositorio.findByIdUsuarioAndIdConsultaAndState(idUsuario, idConsulta, state);
     }
+    public Chat obtenerporConsulta(long idConsulta){
+        return repositorio.findByIdConsulta(idConsulta);
+    }
 
 }
