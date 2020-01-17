@@ -46,7 +46,7 @@ public class MensajeCtrl{
 
     @PostMapping("/subir")
     public boolean agregarMensaje(@RequestBody @Valid Mensaje mensaje){
-        // extraigo el usuario
+
         return servicio.crear(mensaje);
     }
     

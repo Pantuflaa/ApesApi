@@ -17,9 +17,9 @@ import org.hibernate.annotations.GenericGenerator;
 @Entity
 public class Feedback {
     @Id
-    @GenericGenerator(name="incrementpaga", strategy="increment")
-    @GeneratedValue(generator="incrementpaga")
-    @Column(name="id_paga")
+    @GenericGenerator(name="incrementfeedback", strategy="increment")
+    @GeneratedValue(generator="incrementfeedback")
+    @Column(name="id_feedback")
     long id;
     
     
