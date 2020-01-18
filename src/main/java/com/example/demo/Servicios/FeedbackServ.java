@@ -1,19 +1,19 @@
-package com.example.demo.servicios;
+package com.example.demo.Servicios;
 
 import java.util.List;
 
-import com.example.demo.entidades.Feedback;
-import com.example.demo.repositorios.Feedbackrep;
+import com.example.demo.Entidades.Feedback;
+import com.example.demo.Repositorios.FeedbackRep;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service("serviciofeedback")
-public class Feedbackserv{
+public class FeedbackServ{
     @Autowired
     @Qualifier("repositoriofeedback")
-    private Feedbackrep repositorio;
+    private FeedbackRep repositorio;
 
     public boolean crear(Feedback feedback){
         try{
@@ -51,13 +51,13 @@ public class Feedbackserv{
         return repositorio.findAll();
     }
     public List<Feedback> obtenerporUT(long idUsuario,long idTecnico){
-        return repositorio.findByIdUsuariofAndIdTecnicof(idUsuario,idTecnico);
+        return repositorio.findByIdUsuarioAndIdTecnico(idUsuario,idTecnico);
     }
     public List<Feedback> obtenerporU(long idUsuario){
-        return repositorio.findByIdUsuariof(idUsuario);
+        return repositorio.findByIdUsuario(idUsuario);
     }
     public List<Feedback> obtenerporT(long idTecnico){
-        return repositorio.findByIdTecnicof(idTecnico);
+        return repositorio.findByIdTecnico(idTecnico);
     }
 
 

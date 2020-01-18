@@ -1,18 +1,18 @@
-package com.example.demo.servicios;
+package com.example.demo.Servicios;
 import java.util.List;
 
-import com.example.demo.entidades.Mensaje;
-import com.example.demo.repositorios.Mensajerep;
+import com.example.demo.Entidades.Mensaje;
+import com.example.demo.Repositorios.MensajeRep;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service("serviciomensaje")
-public class Mensajeserv{
+public class MensajeServ{
     @Autowired
     @Qualifier("repomensaje")
-    Mensajerep repositorio;
+    MensajeRep repositorio;
 
     public boolean crear(Mensaje mensaje){
         try{

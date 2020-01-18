@@ -1,11 +1,11 @@
-package com.example.demo.controladores;
+package com.example.demo.Controladores;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
-import com.example.demo.entidades.Chat;
-import com.example.demo.servicios.Chatserv;
+import com.example.demo.Entidades.Chat;
+import com.example.demo.Servicios.ChatServ;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,10 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/v1/chat")
-public class Chatctrl{
+public class ChatCtrl{
     @Autowired
     @Qualifier("serviciochat")
-        Chatserv servicio;
+        ChatServ servicio;
 
     @GetMapping("/obtener")
     public Chat obtenerChat(@RequestParam(name="id", required=true) long id){
@@ -52,12 +52,12 @@ public class Chatctrl{
     }
 
     @GetMapping("/obtenerPorTCS")
-    public List<Chat> getAllTCS(@RequestParam(name="id_tecnico",required=true) long idTecnico,@RequestParam(name="id_consulta",required=true) long idConsulta,@RequestParam(name="state",required=true) long state){
-        return servicio.obtenerporTecnicoConsultasState(idTecnico, idConsulta, state);
+    public List<Chat> getAllTCS(@RequestParam(name="id_tecnico",required=true) long id_tecnico,@RequestParam(name="id_consulta",required=true) long id_consulta,@RequestParam(name="state",required=true) long state){
+        return servicio.obtenerporTecnicoConsultasState(id_tecnico, id_consulta, state);
     }
     @GetMapping("/obtenerPorUCS")
-    public List<Chat> getAllUCS(@RequestParam(name="id_usuario",required=true) long idUsuario,@RequestParam(name="id_consulta",required=true) long idConsulta,@RequestParam(name="state",required=true) long state){
-        return servicio.obtenerporUsuarioConsultasState(idUsuario, idConsulta, state);
+    public List<Chat> getAllUCS(@RequestParam(name="id_usuario",required=true) long id_usuario,@RequestParam(name="id_consulta",required=true) long id_consulta,@RequestParam(name="state",required=true) long state){
+        return servicio.obtenerporUsuarioConsultasState(id_usuario, id_consulta, state);
     }
     @GetMapping("/obtenerPorConsulta")
     public Chat obtenerPorConsulta(@RequestParam(name="id", required=true) long id){

@@ -1,21 +1,21 @@
-package com.example.demo.repositorios;
+package com.example.demo.Repositorios;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.example.demo.entidades.Paga;
+import com.example.demo.Entidades.Paga;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
 @Repository("repositoriopaga")
-public interface Pagarep extends JpaRepository<Paga, Serializable>{
+public interface PagaRep extends JpaRepository<Paga, Serializable>{
     
     public abstract Paga findById(long id);
     public abstract List<Paga> findAll();
-    public abstract List<Paga> findByIdUsuariop(long idUsuario);
-    public abstract List<Paga> findByIdTecnicop(long idTecnico);
-    public abstract List<Paga> findByIdUsuariopAndIdTecnicop(long idUsuario,long idTecnico);
+    public abstract List<Paga> findByIdUsuario(long idUsuario);
+    public abstract List<Paga> findByIdTecnico(long idTecnico);
+    public abstract List<Paga> findByIdUsuarioAndIdTecnico(long idUsuario,long idTecnico);
     
 }

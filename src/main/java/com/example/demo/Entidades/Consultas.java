@@ -1,12 +1,12 @@
-package com.example.demo.entidades;
+package com.example.demo.Entidades;
 
-
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -33,18 +33,18 @@ public class Consultas {
     @Column(name="descripcion")
     String descripcion;
     @Column(name="id_usuario")
-    long idUsuario;
+    long id_usuario;
     /**
      * @return the descripcion
      */
     public Consultas(){
 
     }
-    public Consultas(long id, String titulo, String descripcion, long idUsuario){
+    public Consultas(long id, String titulo, String descripcion, long id_usuario){
         this.id=id;
         this.titulo=titulo;
         this.descripcion=descripcion;
-        this.idUsuario=idUsuario;
+        this.id_usuario=id_usuario;
 
     }
     /**
@@ -77,8 +77,8 @@ public class Consultas {
     /**
      * @return the id_usuario
      */
-    public long getIdUsuario() {
-        return idUsuario;
+    public long getId_usuario() {
+        return id_usuario;
     }/**
      * @return the titulo
      */
@@ -100,8 +100,8 @@ public class Consultas {
     /**
      * @param id_usuario the id_usuario to set
      */
-    public void setIdUsuario(long idUsuario) {
-        this.idUsuario = idUsuario;
+    public void setId_usuario(long id_usuario) {
+        this.id_usuario = id_usuario;
     }
     /**
      * @param titulo the titulo to set

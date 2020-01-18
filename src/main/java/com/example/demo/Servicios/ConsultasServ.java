@@ -1,19 +1,19 @@
-package com.example.demo.servicios;
+package com.example.demo.Servicios;
 
 import java.util.List;
 
-import com.example.demo.entidades.Consultas;
-import com.example.demo.repositorios.Consultasrep;
+import com.example.demo.Entidades.Consultas;
+import com.example.demo.Repositorios.ConsultasRep;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service("servicioconsulta")
-public class Consultasserv{
+public class ConsultasServ{
     @Autowired
     @Qualifier("repositorioconsultas")
-    private Consultasrep repositorio;
+    private ConsultasRep repositorio;
 
     public boolean crear(Consultas consulta){
         try{

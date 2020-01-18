@@ -1,12 +1,12 @@
-package com.example.demo.entidades;
+package com.example.demo.Entidades;
 
-
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -21,32 +21,31 @@ public class Tecnico{
     long id;
     
     @Column(name="nombre")
-    String nombret;
+    String nombre;
     @Column(name="correo")
-    String correot;
+    String correo;
     @Column(name="pass")
-    String passt;
+    String pass;
 
     public Tecnico(){
 
     }
-    public Tecnico(long id,String correot, String nombre,String pass){
+    public Tecnico(long id, String nombre,String pass){
         this.id=id;
-        this.nombret=nombre;
-        this.correot=correot;
-        this.passt=pass;
+        this.nombre=nombre;
+        this.pass=pass;
     }
     /**
      * @param correo the correo to set
      */
     public void setCorreo(String correo) {
-        this.correot = correo;
+        this.correo = correo;
     }
     /**
      * @return the correo
      */
     public String getCorreo() {
-        return correot;
+        return correo;
     }
     /**
      * @param id the id to set
@@ -57,12 +56,12 @@ public class Tecnico{
      * @param nombre the nombre to set
      */
     public void setNombre(String nombre) {
-        this.nombret = nombre;
+        this.nombre = nombre;
     }/**
      * @param pass the pass to set
      */
     public void setPass(String pass) {
-        this.passt = pass;
+        this.pass = pass;
     }/**
      * @return the id
      */
@@ -72,11 +71,11 @@ public class Tecnico{
      * @return the nombre
      */
     public String getNombre() {
-        return nombret;
+        return nombre;
     }/**
      * @return the pass
      */
     public String getPass() {
-        return passt;
+        return pass;
     }
 }

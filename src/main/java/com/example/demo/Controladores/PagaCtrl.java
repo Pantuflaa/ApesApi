@@ -1,11 +1,11 @@
-package com.example.demo.controladores;
+package com.example.demo.Controladores;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
-import com.example.demo.entidades.Paga;
-import com.example.demo.servicios.Pagaserv;
+import com.example.demo.Entidades.Paga;
+import com.example.demo.Servicios.PagaServ;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,10 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/v1/paga")
-public class Pagactrl{
+public class PagaCtrl{
     @Autowired
     @Qualifier("serviciopaga")
-        Pagaserv servicio;
+        PagaServ servicio;
 
     @GetMapping("/obtener")
     public Paga obtenerPaga(@RequestParam(name="id", required=true) long id){
@@ -52,15 +52,15 @@ public class Pagactrl{
     }
 
     @GetMapping("/obtenerPorUT")
-    public List<Paga> getAllUT(@RequestParam(name="id_tecnico",required=true) long idTecnico,@RequestParam(name="id_usuario",required=true) long idUsuario){
-        return servicio.obtenerporUT(idTecnico, idUsuario);
+    public List<Paga> getAllUT(@RequestParam(name="id_tecnico",required=true) long id_tecnico,@RequestParam(name="id_usuario",required=true) long id_usuario){
+        return servicio.obtenerporUT(id_tecnico, id_usuario);
     }
     @GetMapping("/obtenerPorU")
-    public List<Paga> getAllU(@RequestParam(name="id_usuario",required=true) long idUsuario){
-        return servicio.obtenerporU(idUsuario);
+    public List<Paga> getAllU(@RequestParam(name="id_usuario",required=true) long id_usuario){
+        return servicio.obtenerporU(id_usuario);
     }
     @GetMapping("/obtenerPorT")
-    public List<Paga> getAllT(@RequestParam(name="id_tecnico",required=true) long idTecnico){
-        return servicio.obtenerporT(idTecnico);
+    public List<Paga> getAllT(@RequestParam(name="id_tecnico",required=true) long id_tecnico){
+        return servicio.obtenerporT(id_tecnico);
     }
 }

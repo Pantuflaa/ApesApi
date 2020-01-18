@@ -1,4 +1,4 @@
-package com.example.demo.entidades;
+package com.example.demo.Entidades;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -20,7 +20,7 @@ public class Mensaje{
 
     @Column(name="mensaje")
     @Type(type="text")
-    private String mensajee;
+    private String mensaje;
 
     @Column(name="id_chat")
     private long idChat;
@@ -32,9 +32,9 @@ public class Mensaje{
 
     }
 
-    public Mensaje(long id, String mensajee, long idChat, long emisor) {
+    public Mensaje(long id, String mensaje, long idChat, long emisor) {
         this.id = id;
-        this.mensajee = mensajee;
+        this.mensaje = mensaje;
         this.idChat = idChat;
         this.emisor = emisor;
     }
@@ -48,11 +48,11 @@ public class Mensaje{
     }
 
     public String getMensaje() {
-        return this.mensajee;
+        return this.mensaje;
     }
 
-    public void setMensaje(String mensajee) {
-        this.mensajee = mensajee;
+    public void setMensaje(String mensaje) {
+        this.mensaje = mensaje;
     }
 
     public long getIdChat() {

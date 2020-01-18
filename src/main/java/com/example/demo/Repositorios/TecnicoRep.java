@@ -1,16 +1,16 @@
-package com.example.demo.repositorios;
+package com.example.demo.Repositorios;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.example.demo.entidades.Tecnico;
+import com.example.demo.Entidades.Tecnico;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
 @Repository("repositoriotecnico")
-public interface Tecnicorep extends JpaRepository<Tecnico, Serializable>{
+public interface TecnicoRep extends JpaRepository<Tecnico, Serializable>{
     
     public abstract Tecnico findById(long id);
 

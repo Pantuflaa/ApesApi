@@ -1,12 +1,12 @@
-package com.example.demo.entidades;
+package com.example.demo.Entidades;
 
-
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 
@@ -73,7 +73,7 @@ public class Chat {
         public long getIdTecnico() {
             return this.idTecnico;
         }
-        public void setIdTecnico(long idTecnico) {
+        public void setId_tecnico(long idTecnico) {
             this.idTecnico = idTecnico;
         } 
         public long getState() {
