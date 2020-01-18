@@ -1,19 +1,19 @@
-package com.example.demo.Servicios;
+package com.example.demo.servicios;
 
 import java.util.List;
 
-import com.example.demo.Entidades.Chat;
-import com.example.demo.Repositorios.ChatRep;
+import com.example.demo.entidades.Chat;
+import com.example.demo.repositorios.Chatrep;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service("serviciochat")
-public class ChatServ{
+public class Chatserv{
     @Autowired
     @Qualifier("repositoriochat")
-    private ChatRep repositorio;
+    private Chatrep repositorio;
 
     public boolean crear(Chat chat){
         try{

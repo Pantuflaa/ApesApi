@@ -1,16 +1,16 @@
-package com.example.demo.Repositorios;
+package com.example.demo.repositorios;
 
 import java.io.Serializable;
 import java.util.List;
 
-import com.example.demo.Entidades.Usuario;
+import com.example.demo.entidades.Usuario;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 
 @Repository("repositoriousuario")
-public interface UsuarioRep extends JpaRepository<Usuario, Serializable>{
+public interface Usuariorep extends JpaRepository<Usuario, Serializable>{
     
     public abstract Usuario findById(long id);
 

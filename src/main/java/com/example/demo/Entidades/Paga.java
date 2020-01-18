@@ -1,12 +1,12 @@
-package com.example.demo.Entidades;
+package com.example.demo.entidades;
 
-import java.util.Set;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
 import javax.persistence.Table;
 
 
@@ -24,18 +24,18 @@ public class Paga {
     
     
     @Column(name="id_usuario")
-    long idUsuario;
+    long idUsuariop;
 
     
     @Column(name="id_consulta")
-    long idConsulta;
+    long idConsultap;
 
     
     @Column(name="id_tecnico")
-    long idTecnico;
+    long idTecnicop;
 
     @Column(name="id_chat")
-    long idChat;
+    long idChatp;
 
 
 
@@ -52,11 +52,11 @@ public class Paga {
         }
         public Paga(long id, long idUsuario, long idConsulta, long idTecnico,long monto,long idChat){
             this.id=id;
-            this.idUsuario=idUsuario;
-            this.idConsulta=idConsulta;
-            this.idTecnico=idTecnico;
+            this.idUsuariop=idUsuario;
+            this.idConsultap=idConsulta;
+            this.idTecnicop=idTecnico;
             this.monto=monto;
-            this.idChat=idChat;
+            this.idChatp=idChat;
         }
         public long getId() {
             return this.id;
@@ -64,23 +64,23 @@ public class Paga {
         public void setId(long id) {
             this.id = id;
         }
-        public long getIdUsuario() {
-            return this.idUsuario;
+        public long getIdUsuariop() {
+            return this.idUsuariop;
         }
-        public void setIdUsuario(long idUsuario) {
-            this.idUsuario = idUsuario;
+        public void setIdUsuariop(long idUsuario) {
+            this.idUsuariop = idUsuario;
         }
-        public long getIdConsulta() {
-            return this.idConsulta;
+        public long getIdConsultap() {
+            return this.idConsultap;
         }
-        public void setIdConsulta(long idConsulta) {
-            this.idConsulta = idConsulta;
+        public void setIdConsultap(long idConsulta) {
+            this.idConsultap = idConsulta;
         }
-        public long getIdTecnico() {
-            return this.idTecnico;
+        public long getIdTecnicop() {
+            return this.idTecnicop;
         }
-        public void setIdTecnico(long idTecnico) {
-            this.idTecnico = idTecnico;
+        public void setIdTecnicop(long idTecnico) {
+            this.idTecnicop = idTecnico;
         } 
         public long getMonto() {
             return this.monto;
@@ -88,11 +88,11 @@ public class Paga {
         public void setMonto(long monto) {
             this.monto = monto;
         }
-        public long getIdChat() {
-            return this.idChat;
+        public long getIdChatp() {
+            return this.idChatp;
         }
-        public void setIdChat(long idChat) {
-            this.idChat = idChat;
+        public void setIdChatp(long idChat) {
+            this.idChatp = idChat;
         }
         
 }

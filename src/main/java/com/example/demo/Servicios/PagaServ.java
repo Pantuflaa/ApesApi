@@ -1,19 +1,19 @@
-package com.example.demo.Servicios;
+package com.example.demo.servicios;
 
 import java.util.List;
 
-import com.example.demo.Entidades.Paga;
-import com.example.demo.Repositorios.PagaRep;
+import com.example.demo.entidades.Paga;
+import com.example.demo.repositorios.Pagarep;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 @Service("serviciopaga")
-public class PagaServ{
+public class Pagaserv{
     @Autowired
     @Qualifier("repositoriopaga")
-    private PagaRep repositorio;
+    private Pagarep repositorio;
 
     public boolean crear(Paga paga){
         try{
@@ -51,13 +51,13 @@ public class PagaServ{
         return repositorio.findAll();
     }
     public List<Paga> obtenerporUT(long idUsuario,long idTecnico){
-        return repositorio.findByIdUsuarioAndIdTecnico(idUsuario,idTecnico);
+        return repositorio.findByIdUsuariopAndIdTecnicop(idUsuario,idTecnico);
     }
     public List<Paga> obtenerporU(long idUsuario){
-        return repositorio.findByIdUsuario(idUsuario);
+        return repositorio.findByIdUsuariop(idUsuario);
     }
     public List<Paga> obtenerporT(long idTecnico){
-        return repositorio.findByIdTecnico(idTecnico);
+        return repositorio.findByIdTecnicop(idTecnico);
     }
 
 

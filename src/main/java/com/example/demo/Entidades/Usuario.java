@@ -1,12 +1,11 @@
-package com.example.demo.Entidades;
+package com.example.demo.entidades;
 
-import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
 import javax.persistence.Table;
 import org.hibernate.annotations.GenericGenerator;
 
@@ -26,8 +25,7 @@ public class Usuario{
     String correo;
     @Column(name="pass")
     String pass;
-    @OneToMany(mappedBy = "id_usuario")
-    private Set<Consultas> consultas;
+ 
     public Usuario(){}
     public Usuario(long id, String nombre,String pass){
         this.id=id;

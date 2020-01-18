@@ -1,12 +1,12 @@
-package com.example.demo.Entidades;
+package com.example.demo.entidades;
 
-import java.util.Set;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToMany;
+
 import javax.persistence.Table;
 
 
@@ -24,15 +24,15 @@ public class Feedback {
     
     
     @Column(name="id_usuario")
-    long idUsuario;
+    long idUsuariof;
 
     
     @Column(name="id_consulta")
-    long idConsulta;
+    long idConsultaf;
 
     
     @Column(name="id_tecnico")
-    long idTecnico;
+    long idTecnicof;
 
     @Column(name="comentario")
     String comentario;
@@ -52,9 +52,9 @@ public class Feedback {
         }
         public Feedback(long id, long idUsuario, long idConsulta, long idTecnico,String comentario,int rating){
             this.id=id;
-            this.idUsuario=idUsuario;
-            this.idConsulta=idConsulta;
-            this.idTecnico=idTecnico;
+            this.idUsuariof=idUsuario;
+            this.idConsultaf=idConsulta;
+            this.idTecnicof=idTecnico;
             this.comentario=comentario;
             this.rating=rating;
         }
@@ -65,22 +65,22 @@ public class Feedback {
             this.id = id;
         }
         public long getIdUsuario() {
-            return this.idUsuario;
+            return this.idUsuariof;
         }
         public void setIdUsuario(long idUsuario) {
-            this.idUsuario = idUsuario;
+            this.idUsuariof = idUsuario;
         }
         public long getIdConsulta() {
-            return this.idConsulta;
+            return this.idConsultaf;
         }
         public void setIdConsulta(long idConsulta) {
-            this.idConsulta = idConsulta;
+            this.idConsultaf = idConsulta;
         }
         public long getIdTecnico() {
-            return this.idTecnico;
+            return this.idTecnicof;
         }
         public void setIdTecnico(long idTecnico) {
-            this.idTecnico = idTecnico;
+            this.idTecnicof = idTecnico;
         } 
         public String getComentario() {
             return this.comentario;

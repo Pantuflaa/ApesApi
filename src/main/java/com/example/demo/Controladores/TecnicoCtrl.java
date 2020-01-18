@@ -1,11 +1,11 @@
-package com.example.demo.Controladores;
+package com.example.demo.controladores;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
-import com.example.demo.Entidades.Tecnico;
-import com.example.demo.Servicios.TecnicoServ;
+import com.example.demo.entidades.Tecnico;
+import com.example.demo.servicios.Tecnicoserv;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,10 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/v1/tecnico")
-public class TecnicoCtrl{
+public class Tecnicoctrl{
     @Autowired
     @Qualifier("serviciotecnico")
-    TecnicoServ servicio;
+    Tecnicoserv servicio;
 
     @GetMapping("/obtener")
     public Tecnico obtenerTecnico(@RequestParam(name="id", required=true) long id){

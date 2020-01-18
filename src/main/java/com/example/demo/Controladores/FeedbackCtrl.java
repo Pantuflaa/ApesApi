@@ -1,11 +1,11 @@
-package com.example.demo.Controladores;
+package com.example.demo.controladores;
 
 import java.util.List;
 
 import javax.validation.Valid;
 
-import com.example.demo.Entidades.Feedback;
-import com.example.demo.Servicios.FeedbackServ;
+import com.example.demo.entidades.Feedback;
+import com.example.demo.servicios.Feedbackserv;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -21,10 +21,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/v1/feedback")
-public class FeedbackCtrl{
+public class Feedbackctrl{
     @Autowired
     @Qualifier("serviciofeedback")
-        FeedbackServ servicio;
+        Feedbackserv servicio;
 
     @GetMapping("/obtener")
     public Feedback obtenerFeedback(@RequestParam(name="id", required=true) long id){
@@ -52,15 +52,15 @@ public class FeedbackCtrl{
     }
 
     @GetMapping("/obtenerPorUT")
-    public List<Feedback> getAllUT(@RequestParam(name="id_tecnico",required=true) long id_tecnico,@RequestParam(name="id_usuario",required=true) long id_usuario){
-        return servicio.obtenerporUT(id_tecnico, id_usuario);
+    public List<Feedback> getAllUT(@RequestParam(name="id_tecnico",required=true) long idTecnico,@RequestParam(name="id_usuario",required=true) long idUsuario){
+        return servicio.obtenerporUT(idTecnico, idUsuario);
     }
     @GetMapping("/obtenerPorU")
-    public List<Feedback> getAllU(@RequestParam(name="id_usuario",required=true) long id_usuario){
-        return servicio.obtenerporU(id_usuario);
+    public List<Feedback> getAllU(@RequestParam(name="id_usuario",required=true) long idUsuario){
+        return servicio.obtenerporU(idUsuario);
     }
     @GetMapping("/obtenerPorT")
-    public List<Feedback> getAllT(@RequestParam(name="id_tecnico",required=true) long id_tecnico){
-        return servicio.obtenerporT(id_tecnico);
+    public List<Feedback> getAllT(@RequestParam(name="id_tecnico",required=true) long idTecnico){
+        return servicio.obtenerporT(idTecnico);
     }
 }
